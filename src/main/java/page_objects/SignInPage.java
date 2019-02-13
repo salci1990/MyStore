@@ -16,11 +16,11 @@ public class SignInPage extends PageObject {
     @FindBy(className = "alert")
     private WebElement alertOn;
 
-    public void clickSignInLink(){
+    public void clickSignInLink() {
         signInLink.click();
     }
 
-    public Boolean isAlertOn(){
-       return signInLink.isDisplayed();
+    public Boolean isAlertOn() {
+        return signInLink.isDisplayed();
     }
 }

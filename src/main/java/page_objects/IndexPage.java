@@ -4,20 +4,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class IndexPage extends PageObject{
+public class IndexPage extends PageObject {
 
-    public IndexPage(WebDriver driver){
+    public IndexPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(className = "login")
-    private WebElement loginLink;
 
 
+    @FindBy(linkText = "Printed Dress")
+    private WebElement firstElementToAdd;
 
-    public void clickLoginLink(){
-        loginLink.click();
+    @FindBy(linkText = "Blouse")
+    private WebElement secondElementToAdd;
+
+    public WebElement firstElement() {
+        return firstElementToAdd;
     }
 
-
+    public WebElement secondElement() {
+        return secondElementToAdd;
+    }
 }
