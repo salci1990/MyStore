@@ -10,8 +10,6 @@ public class IndexPage extends PageObject {
         super(driver);
     }
 
-
-
     @FindBy(linkText = "Printed Dress")
     private WebElement firstElementToAdd;
 
