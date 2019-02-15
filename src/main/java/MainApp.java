@@ -42,13 +42,13 @@ public class MainApp {
         driver.quit();
     }
 
-//    @Test
-//    public void loginErrorTest() {
-//        driver.get("http://automationpractice.com/index.php");
-//        header.clickLoginLink();
-//        signInPage.clickSignInLink();
-//        assertThat(signInPage.isAlertOn());
-//    }
+    @Test
+    public void loginErrorTest() {
+        driver.get("http://automationpractice.com/index.php");
+        header.clickLoginLink();
+        signInPage.clickSignInLink();
+        assertThat(signInPage.isAlertOn());
+    }
 
     @Test
     public void TotalPriceTest(){
