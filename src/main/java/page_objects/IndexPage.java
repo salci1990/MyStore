@@ -2,25 +2,39 @@ package page_objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import java.util.List;
 
 public class IndexPage extends PageObject {
 
     public IndexPage(WebDriver driver) {
         super(driver);
     }
+    @FindBy(partialLinkText = "Add to cart")
+    private WebElement addButton;
 
-    @FindBy(linkText = "Printed Dress")
-    private WebElement firstElementToAdd;
+    @FindBy(className = "cross")
+    private WebElement exitWindow;
 
-    @FindBy(linkText = "Blouse")
-    private WebElement secondElementToAdd;
+    @FindBy(className = "product-container")
+    private List<WebElement> listOfElements;
 
-    public WebElement firstElement() {
-        return firstElementToAdd;
+    public WebElement exitWindowSuccess(){
+        return exitWindow;
     }
 
-    public WebElement secondElement() {
-        return secondElementToAdd;
+    public void clickAddButton(){
+        addButton.click();
+    }
+
+    public WebElement getAddButton() {
+        return addButton;
+    }
+
+    public List<WebElement> findElement(){
+        return listOfElements;
     }
 }
