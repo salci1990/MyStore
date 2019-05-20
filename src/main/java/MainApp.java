@@ -51,7 +51,7 @@ public class MainApp {
     }
 
     @Test
-    public void TotalPriceTest(){
+    public void TotalPriceTest() {
         driver.get("http://automationpractice.com/index.php");
         driver.manage().window().maximize();
         Actions builder = new Actions(driver);
@@ -80,7 +80,7 @@ public class MainApp {
         assertThat(header.checkPriceCard().isDisplayed()).isTrue();
         header.openShoppingCard();
 
-        String total = String.format("%8.2f",shoppingCard.getTotalPrice());
+        String total = String.format("%8.2f", shoppingCard.getTotalPrice());
         String sum = String.format("%8.2f", shoppingCard.getFirstPrice() + shoppingCard.getSecondPrice() + shoppingCard.getShipping());
         assertThat(sum).isEqualTo(total);
     }

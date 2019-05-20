@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LayerCard extends PageObject{
+public class LayerCard extends PageObject {
 
     public LayerCard(WebDriver driver) {
         super(driver);
@@ -13,11 +13,11 @@ public class LayerCard extends PageObject{
     @FindBy(className = "cross")
     private WebElement exitWindow;
 
-    public WebElement exitWindow(){
+    public WebElement exitWindow() {
         return exitWindow;
     }
 
-    public void exitWindowSuccess(){
+    public void exitWindowSuccess() {
         exitWindow.click();
     }
 }

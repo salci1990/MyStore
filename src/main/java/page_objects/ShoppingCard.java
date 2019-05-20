@@ -9,6 +9,7 @@ import java.text.DecimalFormat;
 public class ShoppingCard extends PageObject {
 
     private static DecimalFormat df2 = new DecimalFormat("0.00");
+
     public ShoppingCard(WebDriver driver) {
         super(driver);
     }

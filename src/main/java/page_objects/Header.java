@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Header extends PageObject{
+public class Header extends PageObject {
 
     public Header(WebDriver driver) {
         super(driver);
@@ -23,11 +23,11 @@ public class Header extends PageObject{
         loginLink.click();
     }
 
-    public WebElement moveToShopingCard(){
+    public WebElement moveToShopingCard() {
         return shoppingCard;
     }
 
-    public void openShoppingCard(){
+    public void openShoppingCard() {
         shoppingCard.click();
     }
 
